@@ -278,6 +278,7 @@ void showIntro() {
     uBit.messageBus.listen(MICROBIT_ID_BUTTON_A, MICROBIT_BUTTON_EVT_CLICK, simpleEventHandler);
     introBlinkImage(ArrowLeft, 4);
     if (introEventSkip) return;
+    leaveBeep();
     uBit.messageBus.ignore(MICROBIT_ID_BUTTON_A, MICROBIT_BUTTON_EVT_CLICK, simpleEventHandler);
     eventOK = false;
     uBit.display.print(Tick);
@@ -290,6 +291,7 @@ void showIntro() {
     uBit.messageBus.listen(MICROBIT_ID_BUTTON_B, MICROBIT_BUTTON_EVT_CLICK, simpleEventHandler);
     introBlinkImage(ArrowRight, 4);
     if (introEventSkip) return;
+    leaveBeep();
     uBit.messageBus.ignore(MICROBIT_ID_BUTTON_B, MICROBIT_BUTTON_EVT_CLICK, simpleEventHandler);
     eventOK = false;
     uBit.display.print(Tick);
