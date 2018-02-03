@@ -269,7 +269,8 @@ void startSound() {
 void showIntro() {
     uBit.messageBus.listen(MICROBIT_ID_BUTTON_AB, MICROBIT_BUTTON_EVT_LONG_CLICK, introSkipEventHandler);
 
-    invoke(startSound);
+    //invoke(startSound);
+    invoke(dadadada);
 
     uBit.display.scroll(DISPLAY_HELLO);
     // press A
