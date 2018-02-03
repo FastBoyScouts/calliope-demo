@@ -98,6 +98,13 @@ const uint8_t smiley[25] = {0, 1, 0, 1, 0,
                             1, 0, 0, 0, 1,
                             0, 1, 1, 1, 0
 };
+const uint8_t smiley_thorsten_1[25] = {1, 1, 0, 1, 1,
+                                       1, 1, 0, 1, 1,
+                                       0, 0, 0, 0, 0,
+                                       1, 0, 0, 0, 1,
+                                       0, 1, 1, 1, 0
+};
+
 const uint8_t sadly[25] = {0, 1, 0, 1, 0,
                            0, 1, 0, 1, 0,
                            0, 0, 0, 0, 0,
@@ -146,7 +153,8 @@ const MicroBitImage ArrowLeftRight(5, 5, arrow_leftright);
 const MicroBitImage DoubleRow(5, 5, double_row);
 const MicroBitImage Tick(5, 5, tick);
 const MicroBitImage Heart(5, 5, heart);
-const MicroBitImage Smiley(5, 5, smiley);
+//const MicroBitImage Smiley(5, 5, smiley);
+const MicroBitImage Smiley(5, 5, smiley_thorsten_1);
 const MicroBitImage Sadly(5, 5, sadly);
 const MicroBitImage Rock(5, 5, rock);
 const MicroBitImage Scissors(5, 5, scissors);
