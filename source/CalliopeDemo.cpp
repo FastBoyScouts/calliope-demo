@@ -110,7 +110,7 @@ const uint8_t sadly[25] = {0, 1, 0, 1, 0,
                            0, 1, 1, 1, 0,
                            1, 0, 0, 0, 1
 };
-const sadly_thorsten_1[25] = {1, 1, 0, 1, 1,
+const uint8_t sadly_thorsten_1[25] = {1, 1, 0, 1, 1,
                               1, 1, 0, 1 ,1
                               0, 0, 0, 0, 0,
                               0, 1, 1, 1, 0,
