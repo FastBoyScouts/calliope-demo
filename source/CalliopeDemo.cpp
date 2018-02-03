@@ -170,8 +170,8 @@ const MicroBitImage Wave(7, 5, wave);
 
 MicroBit uBit;
 
-// DEMO 0 - 3
-static const int MAX_DEMOS = 3;
+// DEMO 0 - 4
+static const int MAX_DEMOS = 4;
 static const int DEFAULT_PAUSE = 300;
 
 volatile bool eventOK = false;
@@ -402,7 +402,7 @@ void oracle() {
             uBit.sleep(200);
         }
         int r = uBit.random(100);
-        if (r < 50) uBit.display.print(Smiley);
+        if (r < 101) uBit.display.print(Smiley);
         else uBit.display.print(Sadly);
         uBit.sleep(3000);
         uBit.display.clear();
@@ -703,6 +703,46 @@ void specialAttachment() {
     uBit.soundmotor.soundOff();
 }
 
+
+void leaveJukebox(MicroBitEvent event) {
+    (void)event;
+    uBit.messageBus.ignore(MICROBIT_ID_BUTTON_AB, MICROBIT_BUTTON_EVT_CLICK, leaveJukebox);
+    leaveBeep();
+    state = Menu;
+    eventOK = true;
+}
+
+void juke_entertainer2() {
+        uBit.soundmotor.soundOn(987.767); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(329.628); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(261.626); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(220); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(246.942); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(195.998); uBit.sleep(250); uBit.soundmotor.soundOff();
+}
+
+void juke_entertainer1() {
+        uBit.soundmotor.soundOn(587.33); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(659.255); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(523.251); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(440); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(493.883); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(391.995); uBit.sleep(250); uBit.soundmotor.soundOff();
+}
+
+
+void jukebox() {
+  uBit.messageBus.listen(MICROBIT_ID_BUTTON_AB, MICROBIT_BUTTON_EVT_CLICK, leaveJukebox);
+  while(state == Jukebox) {
+    juke_entertainer1();
+    juke_entertainer2();
+  }
+}
+
+
+
+
+
 // Menu Selection
 void menuSelect(MicroBitEvent event);
 
@@ -738,10 +778,14 @@ void menuSelect(MicroBitEvent event) {
             runSnake();
             break;
         case 4:
+            state = Jukebox;
+            jukebox();
+            break;
+        case 5:
             state = TakeOver;
             takeOver();
             break;
-        case 5:
+        case 6:
             state = SpecialAttachment;
             specialAttachment();
             break;

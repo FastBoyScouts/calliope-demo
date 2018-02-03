@@ -10,6 +10,7 @@ typedef volatile enum State {
     RockPaperScissors,
     LoveMeter,
     Snake,
+    Jukebox,
     SpecialAttachment = 55,
     TakeOver = 99,
 } state_t;
