@@ -315,6 +315,9 @@ void showIntro() {
     uBit.messageBus.listen(MICROBIT_ID_GESTURE, MICROBIT_ACCELEROMETER_EVT_SHAKE, simpleEventHandler);
     introAnimateImage(DoubleRow, 2, -1, 2);
     if (introEventSkip) return;
+    leaveBeep();
+    leaveBeep();
+    leaveBeep();
     uBit.messageBus.ignore(MICROBIT_ID_GESTURE, MICROBIT_ACCELEROMETER_EVT_SHAKE, simpleEventHandler);
     eventOK = false;
     uBit.display.print(Tick);
