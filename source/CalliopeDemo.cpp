@@ -713,21 +713,21 @@ void leaveJukebox(MicroBitEvent event) {
 }
 
 void juke_entertainer2() {
-        uBit.soundmotor.soundOn(987.767); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(329.628); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(261.626); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(220); uBit.sleep(500); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(246.942); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(195.998); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(987.767); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(329.628); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(261.626); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(220); uBit.sleep(750); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(246.942); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(195.998); uBit.sleep(500); uBit.soundmotor.soundOff();
 }
 
 void juke_entertainer1() {
-        uBit.soundmotor.soundOn(587.33); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(659.255); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(523.251); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(440); uBit.sleep(500); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(493.883); uBit.sleep(250); uBit.soundmotor.soundOff();
-        uBit.soundmotor.soundOn(391.995); uBit.sleep(250); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(587.33); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(659.255); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(523.251); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(440); uBit.sleep(750); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(493.883); uBit.sleep(500); uBit.soundmotor.soundOff();
+        uBit.soundmotor.soundOn(391.995); uBit.sleep(500); uBit.soundmotor.soundOff();
 }
 
 
