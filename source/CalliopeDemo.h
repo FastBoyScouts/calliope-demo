@@ -26,14 +26,14 @@ void snake();
 
 // localization
 #ifdef YOTTA_CFG_USE_ENGLISH
-#define DISPLAY_HELLO "Hello!"
+#define DISPLAY_HELLO "MATHE.DIGITAL"
 #define DISPLAY_SHAKE "SHAKE"
 #define DISPLAY_ORACLE "Oracle"
 #define DISPLAY_SUPER "SUPER!"
 #define DISPLAY_THEEND "THE END"
 #define DISPLAY_ERROR "Oops?"
 #else
-#define DISPLAY_HELLO "Hallo!"
+#define DISPLAY_HELLO "MATHE.DIGITAL"
 #define DISPLAY_SHAKE "SCHUETTELN"
 #define DISPLAY_ORACLE "Orakel"
 #define DISPLAY_SUPER "SUPER!"
